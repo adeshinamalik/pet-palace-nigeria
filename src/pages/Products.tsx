@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { useGsapAnimations } from '@/hooks/useGsapAnimations';
-import { CategoryCard } from '@/components/CategoryCard';
-import { Dog, Cat, Bird, Fish, Cow, Utensils, Heart, Users } from 'lucide-react';
+import CategoryCard from '@/components/CategoryCard';
+import { Dog, Cat, Bird, Fish, Tractor, Utensils, Heart, Users } from 'lucide-react';
 
 const Products = () => {
   useGsapAnimations();
@@ -48,7 +48,7 @@ const Products = () => {
       description: "Products for cattle care and management",
       image: "https://source.unsplash.com/featured/?cow",
       link: "/products/cattle",
-      icon: <Cow className="text-pet-brown" />,
+      icon: <Tractor className="text-pet-brown" />,
       bgColor: "bg-[#F1F0FB]"
     },
     {
@@ -105,7 +105,7 @@ const Products = () => {
 
       <div>
         <h2 className="text-2xl font-semibold text-pet-brown mb-6 flex items-center gap-2">
-          <Cow className="text-pet-brown" />
+          <Tractor className="text-pet-brown" />
           Farm Categories
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
