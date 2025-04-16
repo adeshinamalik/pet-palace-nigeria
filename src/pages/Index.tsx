@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { useGsapAnimations } from '@/hooks/useGsapAnimations';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Dog, Utensils, Stethoscope, Book, Users, Heart, ArrowRight } from 'lucide-react';
@@ -15,6 +15,8 @@ import NewsletterSection from '@/components/NewsletterSection';
 import InfoSection from '@/components/InfoSection';
 
 const Index = () => {
+  useGsapAnimations();
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
@@ -23,7 +25,7 @@ const Index = () => {
       <section className="relative bg-gradient-to-r from-pet-green to-pet-orange py-20 overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="hero-content">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 Everything Your Animals Need In One Place
               </h1>
@@ -39,7 +41,7 @@ const Index = () => {
                 </Button>
               </div>
             </div>
-            <div className="hidden lg:block">
+            <div className="hidden lg:block hero-content">
               <img 
                 src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?auto=format&fit=crop&q=80&w=1000" 
                 alt="Happy pets and farm animals" 
@@ -202,7 +204,7 @@ const Index = () => {
       </section>
       
       {/* Adoption Section */}
-      <section className="py-16 bg-pet-beige bg-opacity-30">
+      <section className="py-16 bg-pet-beige bg-opacity-30 adoption-section">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-pet-brown">Find Your New Companion</h2>
@@ -333,7 +335,9 @@ const Index = () => {
       <InfoSection />
       
       {/* Newsletter Section */}
-      <NewsletterSection />
+      <section className="newsletter-section">
+        <NewsletterSection />
+      </section>
       
       {/* Footer */}
       <Footer />
