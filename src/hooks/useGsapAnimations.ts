@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -82,6 +81,37 @@ export const useGsapAnimations = () => {
       y: 50,
       duration: 0.8,
       ease: 'power2.out'
+    });
+
+    // Categories page animations
+    gsap.from('.section-heading', {
+      opacity: 0,
+      y: 30,
+      duration: 0.8,
+      ease: 'power2.out'
+    });
+
+    // Categories description animation
+    gsap.from('.text-gray-600', {
+      opacity: 0,
+      y: 20,
+      duration: 0.8,
+      delay: 0.2,
+      ease: 'power2.out'
+    });
+
+    // Section titles animation
+    gsap.utils.toArray('h2').forEach((title: any) => {
+      gsap.from(title, {
+        scrollTrigger: {
+          trigger: title,
+          start: 'top bottom-=50',
+        },
+        opacity: 0,
+        x: -30,
+        duration: 0.6,
+        ease: 'power2.out'
+      });
     });
   }, []);
 };
