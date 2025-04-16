@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Dog, Cow, Stethoscope, Book, Users, Heart, ArrowRight } from 'lucide-react';
+import { Dog, Utensils, Stethoscope, Book, Users, Heart, ArrowRight } from 'lucide-react';
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -126,7 +126,7 @@ const Index = () => {
             <ServiceCard 
               title="Farm Consultations" 
               description="Expert advice on livestock management, nutrition, breeding, and health." 
-              icon={<Cow size={32} />} 
+              icon={<Utensils size={32} />} 
               link="/services/farm-consultations" 
             />
           </div>

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Menu, X, ShoppingCart, User, Search,
-  Dog, Cow, Stethoscope, Users, Heart
+  Dog, Utensils, Stethoscope, Users, Heart
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -39,7 +39,7 @@ const Navbar = () => {
           
           <div className="group relative">
             <button className="text-gray-700 hover:text-pet-orange transition-colors font-medium flex items-center">
-              <Cow size={18} className="mr-1" /> Farm Animals
+              <Utensils size={18} className="mr-1" /> Farm Animals
             </button>
             <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-md p-4 min-w-[200px] z-10">
               <Link to="/products/cattle" className="block py-2 hover:text-pet-orange">Cattle</Link>
@@ -91,7 +91,7 @@ const Navbar = () => {
               <Dog size={18} className="mr-2" /> Pet Products
             </Link>
             <Link to="/products/cattle" className="text-gray-700 py-2 border-b border-gray-200 flex items-center">
-              <Cow size={18} className="mr-2" /> Farm Animals
+              <Utensils size={18} className="mr-2" /> Farm Animals
             </Link>
             <Link to="/services" className="text-gray-700 py-2 border-b border-gray-200 flex items-center">
               <Stethoscope size={18} className="mr-2" /> Services
