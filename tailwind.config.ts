@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+                // Pet Palace Nigeria custom colors
+                "pet-orange": "#E67E22",
+                "pet-terracotta": "#CD5C5C",
+                "pet-green": "#2E7D32",
+                "pet-gold": "#FFD700",
+                "pet-beige": "#F5F5DC",
+                "pet-brown": "#8B4513",
+                "pet-cream": "#FFFDD0"
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +93,21 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+                'float': {
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(-10px)' },
+                },
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'float': 'float 6s ease-in-out infinite',
+			},
+            backgroundImage: {
+                'hero-pattern': "url('https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&q=80&w=1000')",
+                'texture': "url('https://www.transparenttextures.com/patterns/white-diamond-dark.png')",
+            },
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
