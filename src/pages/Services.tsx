@@ -126,7 +126,7 @@ const Services = () => {
             </div>
             <div className="md:w-1/3">
               <img 
-                src="https://source.unsplash.com/featured/?veterinarian" 
+                src="https://images.unsplash.com/photo-1577175889968-f551f5944abd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                 alt="Customized care" 
                 className="rounded-lg shadow-md w-full h-64 object-cover"
               />

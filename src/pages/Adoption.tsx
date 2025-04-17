@@ -123,7 +123,7 @@ const mockPetListings = [
     type: "Dog - Labrador",
     age: "2 years",
     location: "Lagos",
-    image: "https://source.unsplash.com/featured/?labrador",
+    image: "https://images.unsplash.com/photo-1581888227599-779811939961?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     verified: true
   },
   {
@@ -132,7 +132,7 @@ const mockPetListings = [
     type: "Cat - Persian",
     age: "1 year",
     location: "Abuja",
-    image: "https://source.unsplash.com/featured/?persian,cat",
+    image: "https://images.unsplash.com/photo-1631499420583-9b30fcd3fe78?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     verified: true
   },
   {
@@ -141,7 +141,7 @@ const mockPetListings = [
     type: "Dog - German Shepherd",
     age: "3 years",
     location: "Port Harcourt",
-    image: "https://source.unsplash.com/featured/?german,shepherd",
+    image: "https://images.unsplash.com/photo-1561037404-61cd46aa615b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     verified: true
   },
   {
@@ -150,7 +150,7 @@ const mockPetListings = [
     type: "Cat - Mixed",
     age: "6 months",
     location: "Lagos",
-    image: "https://source.unsplash.com/featured/?kitten",
+    image: "https://images.unsplash.com/photo-1561037404-61cd46aa615b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     verified: true
   },
   {
@@ -159,7 +159,7 @@ const mockPetListings = [
     type: "Dog - Mixed",
     age: "4 years",
     location: "Ibadan",
-    image: "https://source.unsplash.com/featured/?dog,mixed",
+    image: "https://images.unsplash.com/photo-1447684808650-354ae64db5b8?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     verified: true
   },
   {
@@ -168,7 +168,7 @@ const mockPetListings = [
     type: "Rabbit - Holland Lop",
     age: "1 year",
     location: "Lagos",
-    image: "https://source.unsplash.com/featured/?rabbit",
+    image: "https://images.unsplash.com/photo-1695805311468-f8b9399297d4?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     verified: true
   },
   {
@@ -177,7 +177,7 @@ const mockPetListings = [
     type: "Parrot - African Grey",
     age: "5 years",
     location: "Abuja",
-    image: "https://source.unsplash.com/featured/?parrot",
+    image: "https://images.unsplash.com/photo-1576001396458-10e496626bb0?q=80&w=2010&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     verified: true
   },
   {
@@ -186,7 +186,7 @@ const mockPetListings = [
     type: "Dog - Rottweiler",
     age: "2 years",
     location: "Lagos",
-    image: "https://source.unsplash.com/featured/?rottweiler",
+    image: "https://images.unsplash.com/photo-1491930722919-a5fc9ad49a75?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     verified: true
   }
 ];

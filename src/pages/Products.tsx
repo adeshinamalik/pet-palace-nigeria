@@ -12,7 +12,7 @@ const Products = () => {
     {
       title: "Dogs",
       description: "Find everything for your canine companion",
-      image: "https://source.unsplash.com/featured/?dog",
+      image: "https://images.unsplash.com/photo-1710270139070-a9da91782831?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "/products/dogs",
       icon: <Dog className="text-pet-orange" />,
       bgColor: "bg-[#FEF7CD]"
@@ -20,7 +20,7 @@ const Products = () => {
     {
       title: "Cats",
       description: "Purr-fect products for your feline friends",
-      image: "https://source.unsplash.com/featured/?cat",
+      image: "https://images.unsplash.com/photo-1631499420583-9b30fcd3fe78?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "/products/cats",
       icon: <Cat className="text-pet-brown" />,
       bgColor: "bg-[#FDE1D3]"
@@ -28,7 +28,7 @@ const Products = () => {
     {
       title: "Birds",
       description: "Everything for your feathered friends",
-      image: "https://source.unsplash.com/featured/?bird",
+      image: "https://images.unsplash.com/photo-1567113859810-1a93e49fb68a?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "/products/birds",
       icon: <Bird className="text-pet-green" />,
       bgColor: "bg-[#F2FCE2]"
@@ -36,7 +36,7 @@ const Products = () => {
     {
       title: "Fish",
       description: "Aquatic essentials and accessories",
-      image: "https://source.unsplash.com/featured/?aquarium",
+      image: "https://images.unsplash.com/photo-1708368662902-fbe7fef8d4b9?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "/products/fish",
       icon: <Fish className="text-pet-blue" />,
       bgColor: "bg-[#D3E4FD]"
@@ -47,7 +47,7 @@ const Products = () => {
     {
       title: "Cattle",
       description: "Products for cattle care and management",
-      image: "https://source.unsplash.com/featured/?cow",
+      image: "https://images.unsplash.com/photo-1596733430284-f7437764b1a9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "/products/cattle",
       icon: <Tractor className="text-pet-brown" />,
       bgColor: "bg-[#F1F0FB]"
@@ -55,7 +55,7 @@ const Products = () => {
     {
       title: "Poultry",
       description: "Everything for your poultry farm",
-      image: "https://source.unsplash.com/featured/?chicken",
+      image: "https://images.unsplash.com/photo-1595344073133-7549ea4c7981?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "/products/poultry",
       icon: <Bird className="text-pet-orange" />,
       bgColor: "bg-[#FFDEE2]"
@@ -63,7 +63,7 @@ const Products = () => {
     {
       title: "Farm Supplies",
       description: "Essential supplies for farm animals",
-      image: "https://source.unsplash.com/featured/?farm",
+      image: "https://images.unsplash.com/photo-1717224240119-42f94d383104?q=80&w=2065&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "/products/farm-supplies",
       icon: <Utensils className="text-pet-green" />,
       bgColor: "bg-[#E5DEFF]"
@@ -71,7 +71,7 @@ const Products = () => {
     {
       title: "Animal Care",
       description: "Health and wellness products",
-      image: "https://source.unsplash.com/featured/?veterinary",
+      image: "https://images.unsplash.com/photo-1590839823121-c253bf8d1e7d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "/products/animal-care",
       icon: <Heart className="text-pet-terracotta" />,
       bgColor: "bg-[#FEC6A1]"

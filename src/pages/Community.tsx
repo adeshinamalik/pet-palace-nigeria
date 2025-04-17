@@ -50,7 +50,7 @@ const Community = () => {
       id: 5,
       title: "Managing African Swine Fever on Your Farm",
       excerpt: "Prevention strategies and biosecurity measures to protect your pig farm from this devastating disease.",
-      image: "https://images.unsplash.com/photo-1591347887817-173e3d3f6975?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80",
+      image: "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       date: "February 15, 2023",
       category: "Pigs",
       link: "/blog/managing-african-swine-fever"
@@ -59,7 +59,7 @@ const Community = () => {
       id: 6,
       title: "Starting a Profitable Fish Farm in Nigeria",
       excerpt: "A step-by-step guide to setting up your catfish farm, from pond construction to marketing your harvest.",
-      image: "https://images.unsplash.com/photo-1559717201-fbb671ff56b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80",
+      image: "https://images.unsplash.com/photo-1742215809318-8e34bd70f839?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       date: "January 30, 2023",
       category: "Fish",
       link: "/blog/starting-fish-farm"

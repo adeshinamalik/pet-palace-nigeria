@@ -224,7 +224,7 @@ const Index = () => {
               type="Cat" 
               age="1 year" 
               location="Abuja" 
-              image="https://images.unsplash.com/photo-1618826411640-d6df44dd3a7a?auto=format&fit=crop&q=80&w=600" 
+              image="https://images.unsplash.com/photo-1631499420583-9b30fcd3fe78?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
             />
             <AdoptionCard 
               name="Max" 
