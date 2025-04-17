@@ -13,6 +13,8 @@ import OrderConfirmation from "./pages/OrderConfirmation";
 import ServiceDirectory from "./pages/ServiceDirectory";
 import Adoption from "./pages/Adoption";
 import UserAccount from "./pages/UserAccount";
+import Community from "./pages/Community";
+import AccessGroups from "./pages/AccessGroups";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +33,8 @@ const App = () => (
           <Route path="/service-directory" element={<ServiceDirectory />} />
           <Route path="/adoption" element={<Adoption />} />
           <Route path="/account" element={<UserAccount />} />
+          <Route path="/community" element={<Community />} />
+          <Route path="/access-groups" element={<AccessGroups />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

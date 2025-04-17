@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Menu, X, ShoppingCart, User, Search,
-  Dog, Utensils, Stethoscope, Users, Heart
+  Dog, Utensils, Stethoscope, Users, Heart, BookOpen, Info
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -54,11 +54,15 @@ const Navbar = () => {
           </Link>
           
           <Link to="/community" className="text-gray-700 hover:text-pet-orange transition-colors font-medium flex items-center hover:scale-105 transition-transform">
-            <Users size={18} className="mr-1 text-pet-gold" /> Community
+            <BookOpen size={18} className="mr-1 text-pet-gold" /> Community
           </Link>
           
           <Link to="/adoption" className="text-gray-700 hover:text-pet-orange transition-colors font-medium flex items-center hover:scale-105 transition-transform">
             <Heart size={18} className="mr-1 text-pet-terracotta" /> Adoption
+          </Link>
+          
+          <Link to="/access-groups" className="text-gray-700 hover:text-pet-orange transition-colors font-medium flex items-center hover:scale-105 transition-transform">
+            <Info size={18} className="mr-1 text-blue-500" /> Access Info
           </Link>
         </div>
 
@@ -118,10 +122,13 @@ const Navbar = () => {
               <Stethoscope size={18} className="mr-2 text-pet-green" /> Services
             </Link>
             <Link to="/community" className="text-gray-700 py-2 border-b border-gray-200 flex items-center hover:text-pet-orange transition-colors">
-              <Users size={18} className="mr-2 text-pet-gold" /> Community
+              <BookOpen size={18} className="mr-2 text-pet-gold" /> Community
             </Link>
             <Link to="/adoption" className="text-gray-700 py-2 border-b border-gray-200 flex items-center hover:text-pet-orange transition-colors">
               <Heart size={18} className="mr-2 text-pet-terracotta" /> Adoption
+            </Link>
+            <Link to="/access-groups" className="text-gray-700 py-2 border-b border-gray-200 flex items-center hover:text-pet-orange transition-colors">
+              <Info size={18} className="mr-2 text-blue-500" /> Access Info
             </Link>
             <div className="flex items-center justify-between pt-2">
               <button className="text-gray-600 hover:text-pet-orange transition-colors">
