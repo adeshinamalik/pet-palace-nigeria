@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -42,6 +43,57 @@ export const useGsapAnimations = () => {
         delay: index * 0.2,
         ease: 'power2.out'
       });
+    });
+
+    // Services page animations
+    gsap.from('.service-heading', {
+      opacity: 0,
+      y: 30,
+      duration: 0.8,
+      ease: 'power2.out'
+    });
+
+    gsap.from('.service-description', {
+      opacity: 0,
+      y: 20,
+      duration: 0.8,
+      delay: 0.2,
+      ease: 'power2.out'
+    });
+
+    gsap.utils.toArray('.service-section-title').forEach((title: any) => {
+      gsap.from(title, {
+        scrollTrigger: {
+          trigger: title,
+          start: 'top bottom-=50',
+        },
+        opacity: 0,
+        x: -30,
+        duration: 0.6,
+        ease: 'power2.out'
+      });
+    });
+
+    gsap.from('.service-highlight', {
+      scrollTrigger: {
+        trigger: '.service-highlight',
+        start: 'top bottom-=100',
+      },
+      opacity: 0,
+      y: 30,
+      duration: 0.8,
+      ease: 'power2.out'
+    });
+
+    gsap.from('.service-cta', {
+      scrollTrigger: {
+        trigger: '.service-cta',
+        start: 'top bottom-=100',
+      },
+      opacity: 0,
+      y: 30,
+      duration: 0.8,
+      ease: 'power2.out'
     });
 
     // Adoption cards stagger animation
