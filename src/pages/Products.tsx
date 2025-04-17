@@ -1,7 +1,8 @@
-
 import React from 'react';
 import { useGsapAnimations } from '@/hooks/useGsapAnimations';
 import CategoryCard from '@/components/CategoryCard';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import { Dog, Cat, Bird, Fish, Tractor, Utensils, Heart, Users } from 'lucide-react';
 
 const Products = () => {
@@ -78,49 +79,53 @@ const Products = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="mb-12">
-        <h1 className="section-heading text-4xl md:text-5xl mb-4">Our Categories</h1>
-        <p className="text-gray-600 max-w-2xl">Discover our wide range of products for both pets and farm animals. From food to accessories, we've got everything you need.</p>
-      </div>
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <div className="container mx-auto px-4 py-8 flex-grow">
+        <div className="mb-12">
+          <h1 className="section-heading text-4xl md:text-5xl mb-4">Our Categories</h1>
+          <p className="text-gray-600 max-w-2xl">Discover our wide range of products for both pets and farm animals. From food to accessories, we've got everything you need.</p>
+        </div>
 
-      <div className="mb-12">
-        <h2 className="text-2xl font-semibold text-pet-brown mb-6 flex items-center gap-2">
-          <Users className="text-pet-orange" />
-          Pet Categories
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {petCategories.map((category, index) => (
-            <CategoryCard
-              key={category.title}
-              title={category.title}
-              description={category.description}
-              image={category.image}
-              link={category.link}
-              bgColor={category.bgColor}
-            />
-          ))}
+        <div className="mb-12">
+          <h2 className="text-2xl font-semibold text-pet-brown mb-6 flex items-center gap-2">
+            <Users className="text-pet-orange" />
+            Pet Categories
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {petCategories.map((category, index) => (
+              <CategoryCard
+                key={category.title}
+                title={category.title}
+                description={category.description}
+                image={category.image}
+                link={category.link}
+                bgColor={category.bgColor}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h2 className="text-2xl font-semibold text-pet-brown mb-6 flex items-center gap-2">
+            <Tractor className="text-pet-brown" />
+            Farm Categories
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {farmCategories.map((category, index) => (
+              <CategoryCard
+                key={category.title}
+                title={category.title}
+                description={category.description}
+                image={category.image}
+                link={category.link}
+                bgColor={category.bgColor}
+              />
+            ))}
+          </div>
         </div>
       </div>
-
-      <div>
-        <h2 className="text-2xl font-semibold text-pet-brown mb-6 flex items-center gap-2">
-          <Tractor className="text-pet-brown" />
-          Farm Categories
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {farmCategories.map((category, index) => (
-            <CategoryCard
-              key={category.title}
-              title={category.title}
-              description={category.description}
-              image={category.image}
-              link={category.link}
-              bgColor={category.bgColor}
-            />
-          ))}
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 };
