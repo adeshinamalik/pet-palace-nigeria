@@ -1,5 +1,5 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -7,17 +7,83 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useGsapAnimations } from '@/hooks/useGsapAnimations';
-import { User, Package, Calendar, Heart, Award, Settings, MapPin, Phone, Mail } from 'lucide-react';
+import { User, Package, Calendar, Heart, Award, Settings, MapPin, Phone, Mail, LogOut } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { toast } from "@/components/ui/sonner";
+import { useAuth } from '@/contexts/AuthContext';
+import { AuthUser } from '@/components/AuthForms';
+
+// Define the location state type
+interface LocationState {
+  activeTab?: string;
+}
 
 const UserAccount = () => {
   useGsapAnimations();
-  const [activeTab, setActiveTab] = useState("profile");
+  const location = useLocation();
+  const locationState = location.state as LocationState;
+  const [activeTab, setActiveTab] = useState(locationState?.activeTab || "profile");
+  const { user, isLoading, signOut } = useAuth();
+  const navigate = useNavigate();
+  
+  useEffect(() => {
+    // Handle tab change from location state
+    if (locationState?.activeTab) {
+      setActiveTab(locationState.activeTab);
+      // Clear the state to prevent keeping the activeTab on refresh
+      window.history.replaceState({}, document.title);
+    }
+  }, [locationState]);
+  
+  useEffect(() => {
+    // Redirect to login if not authenticated
+    if (!isLoading && !user) {
+      navigate('/auth');
+    }
+  }, [user, isLoading, navigate]);
+
+  const handleSignOut = () => {
+    signOut();
+    toast.success("Signed out successfully");
+    navigate('/');
+  };
+  
+  if (isLoading) {
+    return (
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+        <div className="container mx-auto px-4 py-12 flex-grow flex items-center justify-center">
+          <p>Loading...</p>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+  
+  if (!user) {
+    return null; // Will redirect due to the useEffect
+  }
+  
+  const getUserRoleDisplay = (role: string) => {
+    switch(role) {
+      case 'pet-owner':
+        return 'Pet Owner';
+      case 'farmer':
+        return 'Farmer';
+      case 'service-provider':
+        return 'Service Provider';
+      case 'vendor':
+        return 'Vendor';
+      case 'admin':
+        return 'Administrator';
+      default:
+        return 'Member';
+    }
+  };
   
   return (
     <div className="flex flex-col min-h-screen">
@@ -31,15 +97,15 @@ const UserAccount = () => {
               <CardContent className="p-6">
                 <div className="flex flex-col items-center mb-6">
                   <Avatar className="h-24 w-24 mb-4">
-                    <AvatarImage src="https://source.unsplash.com/featured/?person" alt="User" />
-                    <AvatarFallback>JD</AvatarFallback>
+                    <AvatarImage src={`https://api.dicebear.com/7.x/micah/svg?seed=${user.name}`} alt={user.name} />
+                    <AvatarFallback>{user.name.substring(0, 2).toUpperCase()}</AvatarFallback>
                   </Avatar>
-                  <h2 className="text-xl font-bold">John Doe</h2>
-                  <p className="text-gray-500 text-sm">Member since April 2023</p>
+                  <h2 className="text-xl font-bold">{user.name}</h2>
+                  <p className="text-gray-500 text-sm">Member since {new Date(user.createdAt).toLocaleDateString()}</p>
                   
                   <div className="flex items-center gap-1 mt-2">
                     <Award size={16} className="text-pet-gold" />
-                    <span className="text-sm font-medium">Gold Member</span>
+                    <span className="text-sm font-medium">{getUserRoleDisplay(user.role)}</span>
                   </div>
                 </div>
                 
@@ -101,6 +167,17 @@ const UserAccount = () => {
                   </div>
                   <p className="text-xs mt-2 text-gray-500">150/200 points to next level</p>
                 </div>
+                
+                <div className="mt-6 pt-6 border-t border-gray-200">
+                  <Button 
+                    variant="ghost" 
+                    className="w-full justify-start text-red-500 hover:text-red-600 hover:bg-red-50"
+                    onClick={handleSignOut}
+                  >
+                    <LogOut size={16} className="mr-2" />
+                    Sign Out
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -109,7 +186,7 @@ const UserAccount = () => {
           <div className="lg:col-span-3">
             <Tabs value={activeTab} onValueChange={setActiveTab}>
               <TabsContent value="profile" className="mt-0">
-                <UserProfileTab />
+                <UserProfileTab user={user} />
               </TabsContent>
               
               <TabsContent value="orders" className="mt-0">
@@ -193,7 +270,7 @@ const UserAccount = () => {
 };
 
 // Profile Tab Component
-const UserProfileTab = () => {
+const UserProfileTab = ({ user }: { user: AuthUser }) => {
   // Define form schema
   const formSchema = z.object({
     firstName: z.string().min(2, "First name must be at least 2 characters"),
@@ -205,12 +282,17 @@ const UserProfileTab = () => {
     state: z.string().optional(),
   });
 
+  // Split the name into first and last name for the form
+  const nameParts = user.name.split(' ');
+  const firstName = nameParts[0] || '';
+  const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : '';
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      firstName: "John",
-      lastName: "Doe",
-      email: "johndoe@example.com",
+      firstName,
+      lastName,
+      email: user.email,
       phone: "+234 123 456 7890",
       address: "123 Main Street",
       city: "Lagos",
