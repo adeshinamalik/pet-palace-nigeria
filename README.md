@@ -1,73 +1,150 @@
-# Welcome to your Lovable project
 
-## Project info
+# 🐾 Pet Palace Nigeria
 
-**URL**: https://lovable.dev/projects/ece672c3-0f52-4d88-9cff-2130b240f09e
+Pet Palace Nigeria is a comprehensive web platform dedicated to providing high-quality pet care services, products, and community engagement for pet lovers across Nigeria.
 
-## How can I edit this code?
+## 🌟 Features
 
-There are several ways of editing your application.
+- **Pet Products Shop**: Wide range of pet food, accessories, and care products
+- **Professional Services**: Connect with veterinarians, groomers, and pet care specialists
+- **Pet Adoption Platform**: Find and adopt pets in need of loving homes
+- **Community Forum**: Engage with fellow pet lovers and share experiences
+- **Service Provider Directory**: Locate nearby pet care services
+- **User Account Management**: Personalized profiles and order tracking
+- **Access Groups**: Different user roles (Pet Owners, Service Providers, Administrators)
 
-**Use Lovable**
+## 🛠️ Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ece672c3-0f52-4d88-9cff-2130b240f09e) and start prompting.
+- **Frontend Framework**: React 18.3+ with TypeScript
+- **Build Tool**: Vite
+- **UI Components**: shadcn/ui
+- **Styling**: Tailwind CSS
+- **State Management**: TanStack Query (React Query)
+- **Routing**: React Router DOM
+- **Charts & Visualizations**: Recharts
+- **Animations**: GSAP
+- **Form Handling**: React Hook Form with Zod validation
+- **Toast Notifications**: Sonner
+- **Date Handling**: date-fns
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🏗️ Project Structure
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── components/        # Reusable UI components
+│   ├── ui/           # Base UI components from shadcn/ui
+│   └── ...           # Custom components
+├── contexts/         # React context providers
+├── hooks/            # Custom React hooks
+├── pages/           # Route components
+└── lib/             # Utility functions and helpers
 ```
 
-**Edit a file directly in GitHub**
+## 👥 User Groups
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. **Pet Owners**
+   - Browse and purchase pet products
+   - Book pet care services
+   - Participate in community discussions
+   - Access adoption services
 
-**Use GitHub Codespaces**
+2. **Service Providers**
+   - List professional services
+   - Manage bookings and appointments
+   - Interact with pet owners
+   - Access service analytics
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+3. **Administrators**
+   - Manage user accounts
+   - Monitor platform activity
+   - Handle content moderation
+   - Access admin dashboard
 
-## What technologies are used for this project?
+## 🚀 Getting Started
 
-This project is built with:
+1. **Prerequisites**
+   - Node.js 18+ and npm installed
+   - Git for version control
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+2. **Installation**
+   ```bash
+   # Clone the repository
+   git clone <repository-url>
 
-## How can I deploy this project?
+   # Navigate to project directory
+   cd pet-palace-nigeria
 
-Simply open [Lovable](https://lovable.dev/projects/ece672c3-0f52-4d88-9cff-2130b240f09e) and click on Share -> Publish.
+   # Install dependencies
+   npm install
 
-## Can I connect a custom domain to my Lovable project?
+   # Start development server
+   npm run dev
+   ```
 
-Yes, you can!
+3. **Backend Requirements**
+   - Supabase account for authentication and database
+   - Configure Supabase connection in project settings
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🎨 Key Components
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- **AdoptionCard**: Displays available pets for adoption
+- **ServiceCard**: Shows available pet care services
+- **BlogPostCard**: Renders blog post previews
+- **CategoryCard**: Displays product categories
+- **ServiceProviderCard**: Shows service provider information
+
+## 💅 Styling
+
+The project uses Tailwind CSS with custom configurations:
+
+- Custom color palette including:
+  - pet-orange (#E67E22)
+  - pet-terracotta (#CD5C5C)
+  - pet-green (#2E7D32)
+  - pet-gold (#FFD700)
+  - pet-beige (#F5F5DC)
+  - pet-brown (#8B4513)
+  - pet-cream (#FFFDD0)
+
+- Custom animations and transitions
+- Responsive design for all screen sizes
+- Dark mode support
+
+## 🔐 Authentication
+
+User authentication is handled through Supabase, supporting:
+- Email/Password authentication
+- Social auth providers (if configured)
+- Role-based access control
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 📞 Contact
+
+For questions or support, please contact:
+- Website: [petpalacenigeria.com](https://petpalacenigeria.com)
+- Email: support@petpalacenigeria.com
+
+## 🌟 Acknowledgments
+
+- shadcn/ui for the beautiful component library
+- Tailwind CSS team for the styling framework
+- The open-source community for various tools and libraries
+
+---
+
+Made with ❤️ for pet lovers in Nigeria 🐾
+
