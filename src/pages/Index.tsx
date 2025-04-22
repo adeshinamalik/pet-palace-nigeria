@@ -22,26 +22,25 @@ const Index = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] bg-gradient-to-br from-pet-beige via-white to-pet-cream overflow-hidden">
-        <div className="absolute inset-0 bg-texture opacity-5"></div>
+      <section className="relative min-h-[90vh] bg-gradient-to-br from-white via-pet-beige to-white overflow-hidden">
         <div className="container mx-auto px-4 relative z-10 h-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-[90vh]">
             <div className="lg:col-span-6 space-y-8 py-20 lg:py-0">
-              <h1 className="text-5xl lg:text-7xl font-bold text-pet-brown leading-tight animate-fade-in">
+              <h1 className="text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
                 <span className="text-pet-orange">Everything</span> Your Animals Need
               </h1>
-              <p className="text-xl text-gray-700 max-w-lg animate-fade-in delay-100">
+              <p className="text-xl text-gray-600 max-w-lg">
                 Nigeria's premier marketplace for pet and farm animal products, services, and resources. Making animal care accessible and reliable.
               </p>
-              <div className="flex flex-wrap gap-4 pt-4 animate-fade-in delay-200">
-                <Button className="bg-pet-orange hover:bg-pet-terracotta text-white text-lg px-8 py-6 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
+              <div className="flex flex-wrap gap-4 pt-4">
+                <Button className="bg-pet-orange hover:bg-pet-terracotta text-white text-lg px-6 py-4 rounded-lg">
                   Explore Products
                 </Button>
-                <Button variant="outline" className="border-2 border-pet-orange text-pet-orange hover:bg-pet-orange hover:text-white text-lg px-8 py-6 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
+                <Button variant="outline" className="border-2 border-pet-orange text-pet-orange hover:bg-pet-orange hover:text-white text-lg px-6 py-4 rounded-lg">
                   Find Services
                 </Button>
               </div>
-              <div className="flex items-center gap-8 pt-6 animate-fade-in delay-300">
+              <div className="flex items-center gap-8 pt-6">
                 <div className="flex items-center gap-2">
                   <Users className="text-pet-orange h-6 w-6" />
                   <span className="text-gray-700">10k+ Users</span>
@@ -53,32 +52,24 @@ const Index = () => {
               </div>
             </div>
             <div className="lg:col-span-6 relative h-full hidden lg:block">
-              <div className="relative w-full h-[600px]">
-                <div className="absolute top-10 right-0 w-4/5 h-4/5 rounded-3xl overflow-hidden shadow-2xl animate-fade-in transform hover:scale-105 transition-transform duration-500">
+              <div className="relative w-full h-[600px] flex justify-center items-center">
+                <div className="absolute top-0 right-0 w-1/2 h-1/2 rounded-3xl overflow-hidden shadow-xl transform rotate-6">
                   <img 
                     src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?auto=format&fit=crop&q=80&w=1000" 
                     alt="Happy pets"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute bottom-0 -left-10 w-3/5 h-3/5 rounded-3xl overflow-hidden shadow-2xl animate-fade-in delay-200 transform hover:scale-105 transition-transform duration-500">
+                <div className="absolute bottom-0 left-0 w-1/2 h-1/2 rounded-3xl overflow-hidden shadow-xl transform -rotate-6">
                   <img 
                     src="https://images.unsplash.com/photo-1564085352725-08da0272627d?auto=format&fit=crop&q=80&w=600" 
                     alt="Farm animals"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/80 backdrop-blur-sm rounded-full p-8 shadow-lg animate-pulse">
-                  <Dog className="text-pet-orange h-12 w-12" />
-                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="absolute bottom-0 left-0 w-full">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full">
-            <path fill="#ffffff" fillOpacity="1" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-          </svg>
         </div>
       </section>
 
